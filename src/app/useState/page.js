@@ -1,5 +1,15 @@
 "use client";
+import { Borel } from "next/font/google";
 import { useState } from "react";
+
+const BotaoAcao = (props) => {
+    const estilo_botao = `bg-slate-500 ${props.mais_estilo}`
+    return(
+        <button onClick={props.onClick} className={estilo_botao}>
+            {props.children}
+        </button>
+    )
+}
 
 export default function useStatePage(){
     const [count, setCount] = useState(0);
@@ -21,17 +31,16 @@ export default function useStatePage(){
     return(
         <>
         <div className="text-black">
-            <h1 className="pl-6 pt-10 pb-1 text-2xl">
-                {count}
-            </h1>
-            <div className="flex pb-5">
-                <button onClick={incrementCount} className="ml-5 bg-slate-500">
-                    Incrementar
-                </button>
-                <button onClick={decrementCount} className="ml-1  bg-slate-500">
-                    Decrementar
-                </button>
+            <div className="pl-6 pt-10 pb-1">
+                <h1 className=" text-2xl">
+                    {count}
+                </h1>
+                <div className="flex pb-5">
+                    <BotaoAcao onClick={incrementCount}>Incrementar</BotaoAcao>
+                    <BotaoAcao onClick={decrementCount} mais_estilo="ml-5">Decrement</BotaoAcao>
+                </div>
             </div>
+            
         </div>
         </>
         
