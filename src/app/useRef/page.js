@@ -56,7 +56,7 @@ export default function useRefPage(){
                 <ExempleCount/>
            </div>
            <div>
-                <h3 className="text-rose-900 text-2xl font-bold mb-1">FOCO NO INPUT DO NOME</h3>
+                <h3 className="text-rose-900 text-2xl font-bold mb-1">APAGAR INPUT DO NOME</h3>
                 <ExempleFocus/>
            </div>
             
