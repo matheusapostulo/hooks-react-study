@@ -58,11 +58,7 @@ export default function useRefPage(){
            <div>
                 <h3 className="text-rose-900 text-2xl font-bold mb-1">APAGAR INPUT DO NOME</h3>
                 <ExempleFocus/>
-           </div>
-            
-
-
-            
+           </div>         
         </div>
         
     )
